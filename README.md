@@ -55,20 +55,20 @@ access to) to stage subsequent attacks.
 
 This is my thesis: If access was (accidentally) gained to a high-value target, no further
 "plumbing" was done and the access was leveraged for other activities (by others/from elsewhere?).
-For this to be true, we would need to see a distinct difference between the "onesies" and
+For this to be true, we would need to see a distinct difference between the "*onesies*" and
 this systems with multiple implants.
 
-To start, I looked at all the "*onesies*" in the `intonation` list, combining historical and current data
+To start, I looked at all the onesies in the `intonation` list, combining historical and current data
 to determine what type of organizations where behind the hosts/IP addresses. For my theory to pan out,
-these "*onesies*" would have to be prime targets.
+these onesies would have to be prime targets.
 
 Each host with multiple implants would also have to be a lesser-value target for my thesis to hold up.
-I will be looking into the `intonation` list first, working from *onesies* to the multiple ones.
+I will be looking into the `intonation` list first, working from onesies to the multiple ones.
 
 Rather large amounts of work still need to be done, but I'll share my findings as I go. Lets see where it
 gets me.
 
-Starting with the list of "onesies" as part of the `intonation` "pitch":
+Starting with the list of onesies as part of the `intonation` "pitch":
 
 |ip address     |hostname               |implant type|YYYYMMDD-HHMMSS|
 |:--------------|:----------------------|:-----------|:--------------|
@@ -142,7 +142,7 @@ If you have more or better information, please feel free to contact me.
 |opserver01.iti.net.pk|PK|IT/TELCO|orangutan|ITILahore, NET.PK ISP in Pakistan|
 |sea.net.edu.cn|CN|EDU|patchicillin|? "non-onesie"?. Actually has 4 implants. A website to VPN into a Chinese educational enviroment|
 |nd11mx1-a-fixed.sancharnet.in|IN|TELCO|orangutan|? "non-onesie"? nd11* seems to be a typo. I can find the ndl* host in old (email) posts on the internet, nd11 only in EQGRP files|
-|ndl1mc1-a-fixed.sancharnet.in|IN|TELCO/ISP|incision|? The above makes this a probable False Positive, at least as far as *onesies* go. It is, however, an interesting target: BSNL is India's no. 1 Internet service provider with more than 17 lakh (100.000) subscribers, providing Internet service throughout the entire country (except in New Delhi and Mumbai) under the brand name of " Sancharnet"|
+|ndl1mc1-a-fixed.sancharnet.in|IN|TELCO/ISP|incision|? The above makes this a probable False Positive, at least as far as onesies go. It is, however, an interesting target: BSNL is India's no. 1 Internet service provider with more than 17 lakh (100.000) subscribers, providing Internet service throughout the entire country (except in New Delhi and Mumbai) under the brand name of " Sancharnet"|
 |mail.hangzhouit.gov.cn|CN|GOV/IT|incision|Seems to be a mail server used by at least some people at College of Computer Science, Zhejiang University, HangZhou. Currently gone.|
 |mail.tropmet.res.in|IN|GOV|incision|The Indian Institute of Tropical Meteorology (IITM), Pune, fully devoted to cutting edge research [...] The Institute has excellent infrastructural facilities such as High Performance Computers, observational facilities like RADARS, Radiometers, LIDAR etc., It has a strong link with various universities and national and international organizations. Major research areas at the institute are [...] satellite and radar[...]|
 |smmu-ipv6.smmu.edu.cn|CN|MIL|incision|Second Military Medical University|
