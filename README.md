@@ -130,7 +130,7 @@ If you have more or better information, please feel free to contact me.
 |eol1.egyptonline.com|EG|TELCO/ISP|jackladder|Old. Probably Egypt Online/EOL.com. Information available to me is sketchy.|
 |mailgate.sbell.com.cn|CN|TELCO/ISP|jackladder|State owned enterprise (SASAC). Alcatel-Lucent Shanghai Bell end-to-end telecommunications solutions, wireless and wireline, optical access, LTE, optics, IP, core network, network management and services.
 |sky.kies.co.kr|KR|IT|jackladder|? Seems to be a rather small IT solutions company in Korea, now a part of/selling HP. Special interest?|
-|mn.mn.co.cu|CU|GOV|jackladder|https://books.google.nl/books?isbn=3540322426 pointing to Central Criminologist Laboratory of Cuba|
+|mn.mn.co.cu|CU|GOV|jackladder|https://books.google.nl/books?isbn=3540298509 pointing to Central Criminologist Laboratory of Cuba|
 |segob.gob.mx|MX|GOV|jackladder|Secretary of the Government of Mexico|
 |fw433.npic.ac.cn|CN|ATOMIC|jackladder|Nuclear Power Institute of China (NPIC), a subsidiary to China National Nuclear Corporation (CNNC), only large-scale comprehensive R&D base in China|
 |www.caramail.com|FR|TELCO/ISP|jackladder|Caramail S.A. operates as a webmail service company offering instant messaging services.|
