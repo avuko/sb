@@ -258,33 +258,36 @@ Starting as it does with "badBytes" the `iplanet.py` script is immediately recog
 It seems to be using smtp, so it very much seems like they had (or have) a way of gaining access to a ridiculously often used Enterprise Multi-Tier messaging platform... by sending an email.
 And it probably paid off nicely for these guys to have this 0-day (https://en.wikipedia.org/wiki/Oracle_Communications_Messaging_Server):
 
-```text
-Oracle Communications Messaging Server is Oracle's messaging (email) server software.
-The software was obtained by Oracle as part of the company's acquisition of Sun in 2010.
+>Oracle Communications Messaging Server is Oracle's messaging (email) server software.
+>The software was obtained by Oracle as part of the company's acquisition of Sun in 2010.
+>
+>Oracle's Messaging Server could potentially be the most widely deployed commercial
+>email server on the planet, with claims of 150 million mailboxes deployed worldwide
+>(mostly by ISPs, telcos, universities, government, and cable TV broadband providers).
+>History of development
+>
+>Oracle Communications Messaging Server has a long history, drawing technology from
+>
+>    Sun Internet Mail Server (SIMS)
+>    Netscape Messaging Server (NMS)[2]
+>    PMDF from Innosoft
+>
+>In addition to the Messaging Server's three parents, the software has undergone multiple
+>brand naming changes:
+>
+>    iPlanet Messaging Server
+>    Sun ONE Messaging Server
+>    Sun Java System Messaging Server
+>    Oracle Communications Messaging Exchange Server
+>    Oracle Communications Messaging Server
+>
+>The code base has been carried on throughout these minor brand changes 
+>**with only feature enhancements and bug fixes.**
 
-Oracle's Messaging Server could potentially be the most widely deployed commercial email server on the planet, 
-with claims of 150 million mailboxes deployed worldwide (mostly by ISPs, telcos, universities, government, and cable TV broadband providers).[1]
-History of development
+**Sic.**
 
-Oracle Communications Messaging Server has a long history, drawing technology from
-
-    Sun Internet Mail Server (SIMS)
-    Netscape Messaging Server (NMS)[2]
-    PMDF from Innosoft
-
-In addition to the Messaging Server's three parents, the software has undergone multiple brand naming changes:
-
-    iPlanet Messaging Server
-    Sun ONE Messaging Server
-    Sun Java System Messaging Server
-    Oracle Communications Messaging Exchange Server
-    Oracle Communications Messaging Server
-
-The code base has been carried on throughout these minor brand changes with only feature enhancements and bug fixes.
-```
-
-I just shudder when I read that last sentence. I hope the guys at Oracle/that which was Sun are paying attention.
-If I look at the list of typical users, this would have been (is?) a very fruitful 0-day to have:
+I just shudder when I read that last sentence. I hope the guys at Oracle/that which was Sun are paying attention, because
+if I look at the list of typical users, this would have been (is?) a very fruitful 0-day to have:
 
 ![Oracle Communications Messaging Server](ocm.png)
 
@@ -376,8 +379,6 @@ for dir in `bash count.sh | sort -n -r | grep '1 files' | awk '{print $5}'`; do 
 ./intonation/dmn2.bjpeu.edu.cn___202.204.193.1: jackladder
 ```
 
-
-## Pitchimpair onesies
 
 ## targets with eight(8) (registered) implants
 
