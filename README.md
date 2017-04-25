@@ -152,21 +152,113 @@ If you have more or better information, please feel free to contact me.
 The most interesting part is that, except for the (for me) unclear one in Korea, all of them point to targets which I could reason are high-value to the NSA.
 But `laleh.itrc.ac.ir` is actually running multiple implants (it seemed a onesie because of the trailing dot in a directory name). So that makes the theory somewhat shaky.
 
-Lets start by working down from the systems with most implants. Although there are a number of targets with 7 (and one target, apparently incorrect 8), they are all in `pitchimpair`. 
+Lets start by working down from the systems with most implants. Although there are a number of targets with 7 (and one target, apparently incorrect 8) implants, they are all in `pitchimpair`. 
 
 ### Intonation targets with six(6) implants
 
 |ip address     |hostname               |implant type|YYYYMMDD-HHMMSS|
 |:--------------|:----------------------|:-----------|:--------------|
-202.112.176.3|indy.fjmu.edu.cn| sidetrack patchicillin orangutan jackladder incision dewdrop|20060509-093858|
-194.84.23.125|ns2.rosprint.ru|sidetrack patchicillin orangutan jackladder incision dewdrop|20060322-144346|
-61.0.0.46|ndl1mx1-a-fixed.sancharnet.in|sidetrack patchicillin orangutan jackladder incision dewdrop|20060606-162122|
+|202.112.176.3|indy.fjmu.edu.cn| sidetrack patchicillin orangutan jackladder incision dewdrop|20060509-093858|
+|194.84.23.125|ns2.rosprint.ru|sidetrack patchicillin orangutan jackladder incision dewdrop|20060322-144346|
+|61.0.0.46|ndl1mx1-a-fixed.sancharnet.in|sidetrack patchicillin orangutan jackladder incision dewdrop|20060606-162122|
 
 #### Initial observations:
 
  1. They all have the same implants
  2. All files have the same INTONATION function(?) with the same timestamp for all implants
  3. All of them are from 2006
+
+|hostname|country|vertical(s)|implant type|context                                      |
+|:-------|:------|:----------|:-----------|---------------------------------------------|
+|indy.fjmu.edu.cn|CN|UNI|sidetrack patchicillin orangutan jackladder incision dewdrop|Beijing Medical University. Cannot easily establish relevance|
+|ns2.rosprint.ru|RU|TELCO|sidetrack patchicillin orangutan jackladder incision dewdrop|From the archive.org page in 2006: "Equant (rosprint.ru) serves Russian, foreign and transnational companies and banks/state institutions/SME [with] modern, reliable and high-performance telecommunication solution[s]."|
+|ndl1mx1-a-fixed.sancharnet.in|IN||TELCO|idetrack patchicillin orangutan jackladder incision dewdrop|Bharat Sanchar Nigam Limited (abbreviated BSNL) is an Indian state-owned telecommunications company. On 15 September 2000 took over telecom services and network management from Central Government Departments of Telecom Services (DTS) and Telecom Operations (DTO) with effect from 1 October 2000.| 
+
+#### ndl1mx1-a-fixed.sancharnet.in
+
+ - https://sourceforge.net/p/jboss/mailman/message/16898038/ and http://mail.mail.sarai.net/pipermail/aaj-ke-naam_mail.sarai.net/2006-April/007106.html show us some software the system was running.
+ - Looking at CVE databases only showed some xss and local exploits (https://www.cvedetails.com/vulnerability-list/vendor_id-5/product_id-4721/SUN-Iplanet-Messaging-Server.html) 
+
+
+For example:
+
+http://mail.mail.sarai.net/pipermail/aaj-ke-naam_mail.sarai.net/2006-April/007106.html
+
+```mail
+[Aaj-ke-naam] Delivery Notification: Delivery has failed
+Internet Mail Delivery postmaster at sancharnet.in
+Thu Apr 27 17:53:06 CEST 2006
+
+[...]
+
+Return-path: <aaj-ke-naam at sarai.net>
+Received: from conversion-daemon.bgl1mx1-a-fixed.sancharnet.in by
+bgl1mx1-a-fixed.sancharnet.in
+(iPlanet Messaging Server 5.2 HotFix 1.21 (built Sep  8 2003))
+id <0IYE00FDA1GIWZ at bgl1mx1-a-fixed.sancharnet.in>
+(original mail from aaj-ke-naam at sarai.net); Thu,
+27 Apr 2006 21:23:06 +0530 (IST)
+Received: from sarai.net (dd.nic.in [164.100.38.38])
+by bgl1mx1-a-fixed.sancharnet.in
+(iPlanet Messaging Server 5.2 HotFix 1.21 (built Sep  8 2003))
+with ESMTP id <0IYE002PY1GEFN at bgl1mx1-a-fixed.sancharnet.in> for
+```
+
+But that didn't stop these boys:
+
+```bash
+grep -Ril iplanet * 2>/dev/null
+[...]
+EQGRP/archive_files/esna (2)/iplanet_5_2hf1_21.py
+EQGRP/archive_files/esna (2)/iplanet_5_2hf0_8.py
+EQGRP/archive_files/esna (2)/iplanet_5_2hf1_02.py
+EQGRP/archive_files/esna (2)/sunJava_6_2_4_03.py
+EQGRP/archive_files/esna (2)/sunJava_6_2_3_04.py
+EQGRP/archive_files/esna/iplanet_5_2.py
+EQGRP/archive_files/esna/iplanet_5_2hf1_16.py
+EQGRP/archive_files/esna/iplanet_5_2hf1_25.py
+EQGRP/archive_files/esna/targets.py
+EQGRP/archive_files/esna/iplanet_5_2p1.py
+EQGRP/archive_files/esna/SHA1SUMS
+EQGRP/archive_files/esna/iplanet.py
+EQGRP/archive_files/esna/docs/cleanup_script
+EQGRP/archive_files/esna/iplanet_5_2hf1_21.py
+```
+
+From https://en.wikipedia.org/wiki/Oracle_Communications_Messaging_Server:
+
+```text
+Oracle Communications Messaging Server is Oracle's messaging (email) server software.
+The software was obtained by Oracle as part of the company's acquisition of Sun in 2010.
+
+Oracle's Messaging Server could potentially be the most widely deployed commercial email server on the planet, 
+with claims of 150 million mailboxes deployed worldwide (mostly by ISPs, telcos, universities, government, and cable TV broadband providers).[1]
+History of development
+
+Oracle Communications Messaging Server has a long history, drawing technology from
+
+    Sun Internet Mail Server (SIMS)
+    Netscape Messaging Server (NMS)[2]
+    PMDF from Innosoft
+
+In addition to the Messaging Server's three parents, the software has undergone multiple brand naming changes:
+
+    iPlanet Messaging Server
+    Sun ONE Messaging Server
+    Sun Java System Messaging Server
+    Oracle Communications Messaging Exchange Server
+    Oracle Communications Messaging Server
+
+The code base has been carried on throughout these minor brand changes with only feature enhancements and bug fixes.
+```
+
+If I look at the list of typical users, this would have been (is?) a very fruitful 0-day to have.
+It will be interesting to find out which other targets might have been compromised this way.
+Additionally of note is that `esna` nor something matching that acronym is found in any of the implant lists.
+This could mean that the initial RCE/0-day is not included in those lists.
+
+
+To be continued ...
 
 
 ## Notes
