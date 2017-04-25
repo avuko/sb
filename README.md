@@ -4,8 +4,11 @@
 
 The Shadow Brokers Equation Group dump consists of a number of partial dumps.
 
-I am currently looking at the list of compromised hosts (Intonation/Pitchimpair).
-I found a list online which describes some of the implants and what they supposedly do:
+I am currently looking at the list of compromised hosts (Intonation/Pitchimpair), which includes
+getting very distracted with all the really cool tricks of the trade included in the files.
+I'm working from **x0rz** repositories (https://github.com/x0rz/) as well as the initial release on Mega.
+Just to start somewhere, I was using alist online which describes some of the implants and what they supposedly do.
+As I dive deeper (and as others also spend way too much time spelunking) I hope we get more clarity on this.
 
 |Tool name      |functionality           |
 | ------------- | ---------------------- |
