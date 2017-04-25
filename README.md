@@ -208,7 +208,7 @@ by bgl1mx1-a-fixed.sancharnet.in
 But having no publicly known exploit didn't stop these people. They literally had a working exploit ready for most versions:
 
 ```bash
-grep -Ril iplanet * 2>/dev/null
+⠠⠵ grep -Ril iplanet * 2>/dev/null
 [...]
 EQGRP/archive_files/esna (2)/iplanet_5_2hf1_21.py
 EQGRP/archive_files/esna (2)/iplanet_5_2hf0_8.py
@@ -330,7 +330,7 @@ done
 ## targets with one(1) (registered) implant
 
 ```bash
-for dir in `bash count.sh | sort -n -r | grep '1 files' | awk '{print $5}'`; do echo -n "$dir: " && ls $dir;done
+⠠⠵ for dir in `bash count.sh | sort -n -r | grep '1 files' | awk '{print $5}'`; do echo -n "$dir: " && ls $dir;done
 
 ./pitchimpair/www.elim.net___203.239.130.7: orangutan
 ./pitchimpair/webshared-admin.colt.net___213.41.78.10: incision
@@ -386,7 +386,7 @@ for dir in `bash count.sh | sort -n -r | grep '1 files' | awk '{print $5}'`; do 
 ## targets with eight(8) (registered) implants
 
 ```bash
-for dir in `bash count.sh | sort -n -r | grep '8 files' | awk '{print $5}'`; do echo -n "$dir: " && ls $dir;done
+⠠⠵ for dir in `bash count.sh | sort -n -r | grep '8 files' | awk '{print $5}'`; do echo -n "$dir: " && ls $dir;done
 ./pitchimpair/ns.icu.ac.kr___210.107.128.31: stoicsurgeon v1.2.7.2 sparc-sun-solaris2.8  stoicsurgeon  sidetrack  patchicillin  orangutan  jackladder  incision  dewdrop
 ```
 
@@ -400,7 +400,7 @@ for dir in `bash count.sh | sort -n -r | grep '8 files' | awk '{print $5}'`; do 
 ## targets with six(6) (registered) implants
 
 ```bash
-for dir in `bash count.sh | sort -n -r | grep '6 files' | awk '{print $5}'`; do echo -n "$dir: " && ls $dir;done
+⠠⠵ for dir in `bash count.sh | sort -n -r | grep '6 files' | awk '{print $5}'`; do echo -n "$dir: " && ls $dir;done
 ./pitchimpair/uji.kyoyo-u.ac.jp___133.3.5.33: sidetrack  patchicillin  orangutan  jackladder incision  dewdrop
 ./pitchimpair/tologorri.grupocorreo.es___194.30.32.109: sidetrack  patchicillin  orangutan  jackladder incision  dewdrop
 ./pitchimpair/ns.rtn.net.mx___204.153.24.1: stoicsurgeon  sidetrack  patchicillin  orangutan  incision  dewdrop
