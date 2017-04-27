@@ -56,7 +56,7 @@ access to) to stage subsequent attacks.
 This is my thesis: If access was (accidentally) gained to a high-value target, no further
 "plumbing" was done and the access was leveraged for other activities (by others/from elsewhere?).
 For this to be true, we would need to see a distinct difference between the "*onesies*" and
-this systems with multiple implants.
+the systems with multiple implants.
 
 To start, I looked at all the onesies in the `intonation` list, combining historical and current data
 to determine what type of organizations where behind the hosts/IP addresses. For my theory to pan out,
