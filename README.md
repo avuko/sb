@@ -22,6 +22,135 @@ As I dive deeper (and as others also spend way too much time spelunking) I hope 
 |SIDETRACK      |implant for PITCHIMPAIR 1)|
 |STOICSURGEON   |Rootkit/Backdoor        |
 
+## Timeframes
+
+To understand what the timeframes are we are looking at, I looked at some of the
+scripts and binaries. We probably cannot date things exactly, but having an upper
+margin (and perhaps some indication of the lower margin) might help us understand
+what we are looking at.
+
+Firstly, I identified all binaries in de EQGRP folder. Then I ran a 'strings' on
+all of them, and a grep for 19[0-9]. and 20[0-9]. on those. After filtering out
+some rubbish results, I had a reasonably good list of possible years. For the
+upper limit, I found the year 2012:
+
+```bash
+⠠⠵ grep 2017 eqgrp-binaries-strings-years.txt
+⠠⠵ grep 2016 eqgrp-binaries-strings-years.txt
+⠠⠵ grep 2015 eqgrp-binaries-strings-years.txt
+⠠⠵ grep 2014 eqgrp-binaries-strings-years.txt
+⠠⠵ grep 2013 eqgrp-binaries-strings-years.txt
+⠠⠵ grep 2012 eqgrp-binaries-strings-years.txt
+ deflate 1.2.7 Copyright 1995-2012 Jean-loup Gailly and Mark Adler
+$FreeBSD: src/lib/csu/amd64/crti.S,v 1.7.30.1.8.1 2012/03/03 06:15:13 kensmith Exp $
+$FreeBSD: src/lib/csu/amd64/crtn.S,v 1.6.30.1.8.1 2012/03/03 06:15:13 kensmith Exp $
+$FreeBSD: src/lib/csu/i386-elf/crti.S,v 1.7.22.1.8.1 2012/03/03 06:15:13 kensmith Exp $
+$FreeBSD: src/lib/csu/i386-elf/crtn.S,v 1.6.22.1.8.1 2012/03/03 06:15:13 kensmith Exp $
+ inflate 1.2.7 Copyright 1995-2012 Mark Adler
+```
+
+Next to the FreeBSD dates, inflate 1.27 was released in may 2012. Corroborating
+this are the Python versions found:
+
+```bash
+⠠⠵ grep -hR '#!.*python' * 2>/dev/null |sort -u
+#!/bin/env python
+#!/usr/bin/env python
+#!/usr/bin/env python2.6
+#!/usr/bin/env python2.7
+#!/usr/bin/python
+#!/usr/local/bin/python
+#! /usr/local/bin/python2.7
+#!/usr/local/bin/python3.3
+```
+
+### Python 2.7:
+
+<img src="python27.png">
+
+### Python 3.3:
+
+<img src="python33.png">
+
+With regards to the lower limit, I found one reverence to 01-01-1980
+(in some of the noclients), but without diving into the code, I currently think
+it is just a placeholder.
+
+The other early 1990 dates are mostly from copyright statements:
+
+```bash
+⠠⠵ grep 1993 eqgrp-binaries-strings-years.txt 
+as: SC3.0 early access 01 Sep 1993
+@(#) Copyright (c) 1991, 1993
+@(#)SunOS 5.3 Generic September 1993
+⠠⠵ grep 1994 eqgrp-binaries-strings-years.txt 
+as: SC3.1 dev 09 May 1994
+@(#)SunOS 5.4 generic July 1994
+  UUDEVIEW %s%s%s - the nice and friendly decoder - (w) 1994 Frank Pilhofer
+```
+
+A quick and dirty sample of everything looking remotely like a date:
+
+```bash
+⠠⠵ for i in 19{90..99}; do echo -n "$i " && grep -c $i eqgrp-binaries-strings-years.txt;done
+1990 1
+1991 2
+1992 0
+1993 3
+1994 3
+1995 16
+1996 36
+1997 10
+1998 6
+1999 40
+
+⠵ for i in 20{00..17}; do echo -n "$i " && grep -c $i eqgrp-binaries-strings-years.txt;done
+2000 56
+2001 106
+2002 163
+2003 259
+2004 172
+2005 158
+2006 6
+2007 10
+2008 16
+2009 21
+2010 16
+2011 0
+2012 6
+2013 0
+2014 0
+2015 0
+2016 0
+2017 0
+```
+
+The trickortreat files point in the same direction:
+
+```bash
+trickortreat⠠⠵ grep -hR -o '__200[[:digit:]]' * |sort |uniq -c |sort -n
+     14 __2000
+     16 __2008
+     31 __2009
+     54 __2001
+     74 __2002
+     78 __2003
+     85 __2007
+    170 __2005
+    182 __2004
+    189 __2006
+```
+
+So, activity seems to have focussed on the early 2000's, but some of the tools
+used are from a late as 2012. I'll probably spend some time trying to link
+campaigns to certain newer tools. Until I do, I can think of two explanations for
+the current discrepancies between activities and tooling timestamps:
+
+ 1. The tooling directories (perhaps on network shares?) were updated after
+    the system(s) were used for the INTONATION and PITCHIMPAIR campaigns.
+ 2. There is information about other actions missing.
+
+
 ## Intonation Onesies
 
 <img align="left" src="onesies.jpg">
@@ -298,8 +427,64 @@ It will be interesting to find out which other targets might have been compromis
 Additionally of note is that I could not find `esna` nor something matching that acronym in any of the implant lists.
 This could mean that the initial RCE/0-day of a target is not included in those lists, although "absence of evidence is not evidence of absence".
 
+#### indy.bjmu.edu.cn (202.112.176.3)
 
-To be continued ...
+
+Finding `indy` proved simple enough:
+
+
+```
+⠠⠵ nslookup indy.bjmu.edu.cn
+Server:		195.121.1.34
+Address:	195.121.1.34#53
+
+Non-authoritative answer:
+Name:	indy.bjmu.edu.cn
+Address: 202.112.176.3
+```
+
+In Google I managed to find a question on a [Chinese forum in 2009](https://bbs.pku.edu.cn/v2/post-read.php?bid=209&threadid=3407639) where a user (tidzhang [离线]) tries to figure out
+why an address doesn't resolve:
+
+```text
+nslookup vip.xunlei.com
+服务器：indy.bjmu.edu.cn
+address:202.112.176.3
+非权威应答：
+名称：vip.xunlei.com
+address:125.39.150.19
+```
+
+My Chinese is non-existent, but Google is there to help:
+
+![服务器](server.png)
+
+Coolypf answers tidzhang:
+
+> "Figure:
+> The North Medical DNS ranked first, [...]"
+
+Clearly, indy has been a dns server for a while.
+
+So, lets see:
+
+```bash
+⠠⠵ nslookup indy.bjmu.edu.cn 202.112.176.3
+Server:		202.112.176.3
+Address:	202.112.176.3#53
+
+Name:	indy.bjmu.edu.cn
+Address: 202.112.176.3
+
+⠠⠵ dig +noall +answer @202.112.176.3 version.bind txt chaos
+version.bind.		0	CH	TXT	"9.6-ESV-R5-P1"
+
+```
+
+The version is from 2011, so that is not going to help us see the what the (BIND?) version was in 2006.
+
+# To be continued ...
+
 
 
 ## Notes
