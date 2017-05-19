@@ -24,10 +24,10 @@ As I dive deeper (and as others also spend way too much time spelunking) I hope 
 
 ## Timeframes
 
-To understand what the timeframes are we are looking at, I looked at some of the
+To understand what timeframes we are dealing with, I looked at some of the
 scripts and binaries. We probably cannot date things exactly, but having an upper
 margin (and perhaps some indication of the lower margin) might help us understand
-what we are looking at.
+the timing of both the EQGRP actions and the ShadowBrokers theft better.
 
 Firstly, I identified all binaries in de EQGRP folder. Then I ran a 'strings' on
 all of them, and a grep for 19[0-9]. and 20[0-9]. on those. After filtering out
@@ -72,18 +72,18 @@ this are the Python versions found:
 
 <img src="python33.png">
 
-With regards to the lower limit, I found one reverence to 01-01-1980
+With regards to the lower limit, I found one reference to 01-01-1980
 (in some of the noclients), but without diving into the code, I currently think
 it is just a placeholder.
 
 The other early 1990 dates are mostly from copyright statements:
 
 ```bash
-⠠⠵ grep 1993 eqgrp-binaries-strings-years.txt 
+⠠⠵ grep 1993 eqgrp-binaries-strings-years.txt
 as: SC3.0 early access 01 Sep 1993
 @(#) Copyright (c) 1991, 1993
 @(#)SunOS 5.3 Generic September 1993
-⠠⠵ grep 1994 eqgrp-binaries-strings-years.txt 
+⠠⠵ grep 1994 eqgrp-binaries-strings-years.txt
 as: SC3.1 dev 09 May 1994
 @(#)SunOS 5.4 generic July 1994
   UUDEVIEW %s%s%s - the nice and friendly decoder - (w) 1994 Frank Pilhofer
@@ -141,10 +141,11 @@ trickortreat⠠⠵ grep -hR -o '__200[[:digit:]]' * |sort |uniq -c |sort -n
     189 __2006
 ```
 
-So, activity seems to have focussed on the early 2000's, but some of the tools
-used are from a late as 2012. I'll probably spend some time trying to link
-campaigns to certain newer tools. Until I do, I can think of two explanations for
-the current discrepancies between activities and tooling timestamps:
+So, activity seems to have focussed on the early 2000s, but some of the tools
+used are from as late as 2012. I'll probably spend some time trying to link
+campaigns to certain newer tools. Until I do, I can think of two likely
+explanations for the current discrepancies between activities and tooling
+timestamps:
 
  1. The tooling directories (perhaps on network shares?) were updated after
     the system(s) were used for the INTONATION and PITCHIMPAIR campaigns.
