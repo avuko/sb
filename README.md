@@ -49,7 +49,7 @@ $FreeBSD: src/lib/csu/i386-elf/crtn.S,v 1.6.22.1.8.1 2012/03/03 06:15:13 kensmit
  inflate 1.2.7 Copyright 1995-2012 Mark Adler
 ```
 
-Next to the FreeBSD dates, inflate 1.27 was released in may 2012. Corroborating
+Next to the FreeBSD dates, inflate 1.2.7 was released in may 2012. Corroborating
 this are the Python versions found:
 
 ```bash
