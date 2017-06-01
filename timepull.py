@@ -21,11 +21,3 @@ for root, dirs, files in os.walk(".", topdown=False):
                 print(isotime(gettime(root)), root, isotime(gettime(os.path.join(root, name))), os.path.join(root, name))
         except OSError:
             print("OSError issues with: " + os.path.join(root, name))
-
-# Open a file
-# path = "."
-# dirs = os.listdir(path)
-
-# This would print all the files and directories
-# for dir in dirs:
-#    print(dir, os.path.getctime(dir))
